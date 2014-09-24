@@ -6,10 +6,8 @@ project(grasp_verification)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   cv_bridge
-  dynamic_reconfigure
   geometry_msgs
   image_transport
-  mcr_perception_msgs
   message_generation
   roscpp
   sensor_msgs
@@ -109,7 +107,9 @@ include_directories(
 # )
 
 ## Declare a cpp executable
-# add_executable(grasp_verification_node src/grasp_verification_node.cpp)
+##add_executable(grasp_verification_node 
+##    ros/src/grasp_verification_node.cpp
+##    )
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
