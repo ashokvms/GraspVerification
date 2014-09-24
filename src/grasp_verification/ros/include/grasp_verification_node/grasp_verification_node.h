@@ -4,12 +4,14 @@
 #include <ros/ros.h>
 #include <ros/package.h>
 #include <std_msgs/String.h>
+#include <std_msgs/Bool.h>
 #include <image_transport/image_transport.h>
 #include <sensor_msgs/image_encodings.h>
 #include <cv_bridge/cv_bridge.h>
 #include <opencv/cv.h>
 #include <opencv/highgui.h>
 #include <opencv2/opencv.hpp>
+
 
 #include <grasp_verification/grasp_verification.h>
 
@@ -50,7 +52,7 @@ class GraspVerificationNode
         bool image_sub_status_; 
         int graps_verification_status_ ;
         std_msgs::String status_msg_;
-        std_msgs::Bool resutl_;
+        std_msgs::Bool result_;
         Mat image_;
         Mat debug_image_;
         States run_state_;

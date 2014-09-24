@@ -15,7 +15,7 @@ GraspVerificationNode::~GraspVerificationNode()
 {
     event_pub_.shutdown();
     event_sub_.shutdown();
-    grasp_verification_.shutdown();
+    grasp_verification_pub_.shutdown();
     image_pub_.shutdown();
     image_sub_.shutdown();
 }
@@ -73,7 +73,7 @@ void GraspVerificationNode::idleState()
 
 void GraspVerificationNode::runState()
 {
-    processOpticalFlow();
+    processGraspVerification();
     run_state_ = INIT;
 }
 
@@ -91,7 +91,7 @@ void GraspVerificationNode::processGraspVerification()
 
     graps_verification_status_ = verificator.verify_grasp(image_);
 
-    result.data = graps_verification_status_;
+    result_.data = graps_verification_status_;
 
     std::stringstream ss;
     
@@ -108,7 +108,7 @@ void GraspVerificationNode::processGraspVerification()
 
     event_pub_.publish(status_msg_);
     //publish to boolean
-    grasp_verification_pub_.publish(resutl_);
+    grasp_verification_pub_.publish(result_);
 }
 
 int main(int argc, char **argv)
