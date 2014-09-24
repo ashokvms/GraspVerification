@@ -11,7 +11,7 @@
 #include <opencv/highgui.h>
 #include <opencv2/opencv.hpp>
 
-#include <grasp_verification/grasp_verification.hpp>
+#include <grasp_verification/grasp_verification.h>
 
 using namespace std;
 using namespace cv;

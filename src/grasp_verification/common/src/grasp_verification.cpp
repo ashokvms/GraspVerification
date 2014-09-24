@@ -1,4 +1,4 @@
-#include "grasp_verification.hpp"
+#include <grasp_verification/grasp_verification.h>
 
 
 GraspVerification::GraspVerification()

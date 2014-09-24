@@ -1,4 +1,4 @@
-#include <grasp_verification_node/grasp_verification.hpp>
+#include <grasp_verification_node/grasp_verification_node.h>
 
 GraspVerificationNode::GraspVerificationNode(ros::NodeHandle &nh) : node_handler_(nh), image_transporter_(nh)
 {
