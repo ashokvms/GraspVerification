@@ -97,12 +97,12 @@ void GraspVerificationNode::processGraspVerification()
     
     
     if (graps_verification_status_ == 1) {
-        ss << "There is an object between the grasp";
+        ss << "There is an object between the gripper";
         status_msg_.data = ss.str();
     }  
     
     else {
-        ss << "There is an object between the grasp";
+        ss << "There is no object between the gripper";
         status_msg_.data = ss.str();
     }
 
